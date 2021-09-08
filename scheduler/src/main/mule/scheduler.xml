@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="schedulerFlow" doc:id="60758a9a-10ae-41d4-9cfd-469de76fed2d" >
+		<scheduler doc:name="Scheduler" doc:id="46734a13-084c-43ef-97c7-8111af7cc604" >
+			<scheduling-strategy >
+				<fixed-frequency frequency="2" timeUnit="MINUTES"/>
+			</scheduling-strategy>
+		</scheduler>
+		<logger level="INFO" doc:name="Logger" doc:id="5c0ba58e-bf2d-404b-afa9-dd97f288f003" message="Scheduler ran succesfully after 2 minutes of time interval"/>
+	</flow>
+</mule>
